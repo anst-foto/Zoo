@@ -1,8 +1,6 @@
-﻿using Zoo.Aviarys;
-
-namespace Zoo;
+﻿namespace Zoo;
 
 public class ZooPark
 {
-    public ICollection<Aviary> Aviaries { get; set; } = new List<Aviary>();
+    public ICollection<Aviary> Aviaries { get; init; } = new List<Aviary>();
 }
