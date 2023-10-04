@@ -1,0 +1,35 @@
+﻿@startuml
+'https://plantuml.com/class-diagram
+
+interface Water {}
+interface Terra {}
+interface Air {}
+
+abstract class Animal {
++ type : string
++ name : string
++ age : int
+}
+
+Animal <|-- Frog
+Water <|.. Frog
+Terra <|.. Frog
+class Frog {}
+
+Animal <|-- Fish
+Water <|.. Fish
+class Fish {}
+
+Animal <--o Aviary
+abstract class Aviary {
++ animals : Animal[]
++ max_count_animals : int
+}
+
+Aviary <|-- WaterAviary
+Water <|.. WaterAviary
+class WaterAviary {
++ AddAnimal(animal : Animal)
+}
+
+@enduml
